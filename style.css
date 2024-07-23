@@ -1,0 +1,795 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Arial", "Helvetica", "微軟正黑體", sans-serif;
+  font-size: 1rem;
+  background-color: #FFF5EE;
+  margin: 0 auto;
+}
+
+/* 可重複使用的 reusable css code */
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+section{
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading h2{
+  font-family: 'Abril Fatface';
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #A9A9A9;
+  letter-spacing: 2px;
+}
+
+.heading h3{
+  font-size: 2rem;
+  color: #8B4513;
+  opacity: 0.8;
+}
+
+/* 導覽列 navbar */
+header{
+  position: static;
+  height: 80px;
+  width: 100%;
+  background-color: #3d3d3d;
+}
+
+.navigation{
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: auto;
+}
+
+.logo{
+  float: left;
+}
+
+.logo a{
+  text-decoration: none;
+  font-family: 'Abril Fatface';
+  font-size: 2rem;
+  text-transform: capitalize;
+  height: 80px;
+  line-height: 80px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.menu-icon{
+  display: none;
+}
+
+.menu-icon i{
+  text-decoration: none;
+  color: #fff;
+  height: 80px;
+  line-height: 80px;
+  width: 50px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.navbar{
+  float: right;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar a{
+  text-decoration: none;
+  display: block;
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0 1rem;
+  position: relative;
+}
+
+.navbar a::after{
+  content: " ";
+  position: absolute;
+  height: 3px;
+  background-color: #fff;
+  width: 0;
+  left: 0;
+  bottom: 20px;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after{
+  width: 100%;
+}
+
+/* 首頁 home */
+.home{
+  width: 100%;
+  height: calc(100%-80px);
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 95%;
+  padding-top: 50px;
+}
+
+.home-text{
+  width: 40%;
+}
+
+.home-text span{
+  font-family: 'Abril Fatface', "cursive";
+  font-size: 3rem;
+  color: #A9A9A9;
+}
+
+.home-text h1{
+  font-family: 'Abril Fatface', "cursive";
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+.home-text h2{
+  font-family: 'Abril Fatface', "cursive";
+  font-size: 2rem;
+  letter-spacing: 1px;
+  padding-bottom: 16px;
+  color: #8B4513;
+}
+
+.home-text p{
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: #1C1917;
+  padding-bottom: 32px;
+}
+
+.home-text .button{
+  background-color: #8B4513;
+  padding: 10px 20px;
+  color: #F5F5F5;
+  border-radius: 20px;
+}
+
+.home-imgbox{
+  width: 50%;
+  height: 500px;
+  position: relative;
+}
+
+.home-imgbox .home-img{
+  position: absolute;
+  top:0;
+  right: 100px;
+  width: 350px;
+  height: 400px;
+  border-radius: 200px 200px 0 0;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.home-img img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center right;
+}
+
+.home-imgbox .home-colorblack1{
+  position: absolute;
+  bottom: 50px;
+  right: 0px;
+  width: 350px;
+  height: 400px;
+  background-color: #8B4513;
+  border-radius: 200px 200px 0 0;
+  z-index: 1;
+}
+
+.home-imgbox .home-colorblack2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 410px;
+  border: 1px solid #8B4513;
+  border-radius: 200px 200px 0 0;
+  z-index: 1;
+}
+
+/* Down Arrow */
+.downarrow {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+}
+
+.chevron {
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron::before,
+.chevron::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #8B4513;
+}
+
+.chevron::before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron::after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #8B4513;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+/* 網頁練習 webpage */
+.webpage{
+  margin: 100px auto;
+}
+
+.webpage-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 100px auto;
+}
+
+.webpage-item{
+  position: relative;
+  transition: 0.3 ease;
+  margin: 10px;
+}
+
+.webpage-img{
+  width: 350px;
+  height: 250px;
+}
+
+.webpage-img img{
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #8B4513;
+  width: 350px;
+  height: 250px;
+  opacity: 0;
+}
+
+.webpage-item:hover .overlay,
+.webpage-item:hover .overlay i{
+  opacity: 0.9;
+}
+
+.overlay a{
+  display: block;
+  width: 350px;
+  height: 250px;
+  text-decoration: none;
+  font-size: 36px;
+  text-align: center;
+  color: white;
+  padding-top: 110px;
+}
+
+.webpage-text h4{
+  font-size: 21px;
+  color: #8B4513;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.webpage-text p{
+  font-size: 18px;
+  text-align: center;
+}
+
+/* 作品區 portfolio */
+.portfolio{
+  margin: 100px auto;
+}
+
+.portfolio-container{
+  display: flex;
+	flex-direction: column;
+}
+
+.portfolio-menu{
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-btn .btn{
+  display: inline-block;
+	font-size: 1rem;
+	text-decoration: none;
+	margin: 0 8px;
+	border: 1px solid #8B4513;
+	color: #8B4513;
+	padding: 10px 20px;
+	border-radius: 20px;
+}
+
+.btn.active,
+.btn:hover{
+	background-color: #8B4513;
+	color: #FFF5EE;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 16px;
+}
+
+.gallery img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 關於我 about */
+.about{
+  margin-top: 100px;
+}
+
+.about-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.about-img{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 4rem;
+}
+
+.about-img img{
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center right;
+}
+
+.about-text span{
+  font-size: 18px;
+  line-height: 2;
+  color: #8B4513;
+}
+
+.about-text p{
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.about-information{
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-information .info-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.about-information .info-box i{
+  font-size: 18px;
+  padding-right: 10px;
+  color: #8B4513;
+}
+
+/* 頁尾 footer  */
+footer{
+	background-color: #8B4513;
+	line-height: 50px;
+	text-align: center;
+	color: #F5F5F5;
+}
+
+/* 向上按鈕 button */
+.up{
+	width: 60px;
+	height: 60px;
+	border: 1px solid #8B4513;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 80px;
+	right: 32px;
+}
+
+.up i{
+	display: block;
+	color: #8B4513;
+	font-size: 2rem;
+	text-align: center;
+	padding-top: 14px;
+}
+
+.up a{
+	display: block;
+	text-decoration: none;
+}
+
+/* ---------------------------------------------- */
+/* 響應式設定 responsive 平板橫 */
+@media (max-width: 1024px){
+  /* 可重複使用的 reusable css code(平板橫) */
+  
+
+  /* 導覽列 navbar(平板橫) */
+  
+}
+
+
+/* 響應式設定 responsive 平板直手機橫 */
+@media (max-width: 768px){
+
+  /* 可重複使用的 reusable css code(平板直手機橫) */
+  section {
+    max-width: 768px;
+    padding: 0 4rem;
+  }
+
+  .heading h2{
+    font-size: 2rem;
+  }
+
+  .heading h3{
+    font-size: 1.8rem;
+  }
+
+  /* 導覽列 navbar(平板直手機橫)*/
+  .navigation{
+  max-width: 768px;
+  }
+
+  .menu-icon{
+    display: block;
+    float: right;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .navbar.active{
+    display: block;
+  }
+  
+  .navbar ul{
+    flex-direction: column;
+    background-color: #8B4513;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+  }
+
+  .navbar a{
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  /* 首頁 home */
+  .home{
+    height: initial;
+  }
+  .home-text{
+    width: 50%;
+  }
+  .home-container{
+    height: initial;
+  }
+
+  .home-text span{
+    font-size: 2rem;
+  }
+
+  .home-text h1{
+    font-size: 3rem;
+  }
+  .home-text h2{
+    font-size: 1.8rem;
+  }
+
+  .home-imgbox{
+    width: 40%;
+    height: 400px;
+  }
+  .home-imgbox .home-img{
+    top: 30px;
+    right: 0;
+    width: 280px;
+    height: 300px;
+  }
+  
+  .home-imgbox .home-colorblack1{
+  bottom: 40px;
+  right: -30px;
+  width: 280px;
+  height: 300px;
+  }
+
+  .home-imgbox .home-colorblack2{
+  top: 10px;
+  left: -40px;
+  width: 280px;
+  height: 300px;
+  }
+
+  /* Down Arrow */
+  .downarrow {
+    display: none;
+  }
+  
+  /* 網頁練習 webpage */
+  .webpage-container{
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+  }
+
+  /* 關於我 about */
+  .about{
+    margin-top: 50px;
+  }
+
+  .about-img{
+    padding-right: 2rem;
+  }
+  .about-text p{
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .about-information{
+    margin-top: 1rem;
+  }
+}
+
+/* 響應式設定 responsive 手機 */
+@media (max-width: 540px) {
+
+  /* 可重複使用的 reusable css code(手機) */
+  section {
+    max-width: 540px;
+    padding: 0 1rem;
+  }
+  /* 導覽列 navbar(手機) */
+  .navigation{
+    max-width: 540px;
+  }
+
+  .menu-icon i{
+    text-align: right;
+  }
+
+  /* 首頁 home(手機) */
+  .home-container {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  .home-text{
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .home-text p{
+    padding-bottom: 24px;
+  }
+
+  .home-imgbox{
+    width: 90%;
+  }
+
+  .home-imgbox .home-img{
+    top: 40px;
+    right: 40px;
+  }
+
+  .home-imgbox .home-colorblack1{
+    bottom: 10px;
+    right: -5px;
+  }
+
+  .home-imgbox .home-colorblack2{
+    left: 10px;
+  }
+
+  /* 網頁練習 webpage(手機) */
+  .webpage{
+    margin: 50px auto;
+  }
+
+  .webpage-container{
+    margin: 30px auto;
+  }
+
+  .webpage-item{
+    margin: 0px;
+    padding-bottom: 20px;
+  }
+
+  /* 作品區 portfolio */
+  .portfolio{
+    margin: 50px auto;
+  }
+  .portfolio-menu {
+    margin: 30px 0;
+  }
+
+  .menu-btn{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu-btn .btn{
+    margin-bottom: 20px;
+  }
+
+  /* 關於我 about(手機) */
+  .about{
+    margin-top: 50px;
+  }
+  
+  .about-container{
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  .about-img{
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .about-text{
+    padding: 0 30px;
+    padding-top: 20px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

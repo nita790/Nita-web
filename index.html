@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nita website</title>
+	<!-- favicon -->
+	<link rel="shortcut icon" href="image/avatar.png" type="image/x-icon">
+	<!-- my css file -->
+	<link rel="stylesheet" href="style.css">
+	<!-- font-awesome css cdn link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<!-- jquerycss cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+	<!-- magnific-popup css cdn link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+</head>
+<body>
+	<!-- 導覽列 navbar -->
+	<header class="header" id="header">
+		<div class="navigation">
+			<div class="logo">
+				<a href="index.html">Nita Chang</a>
+			</div>
+			<div class="menu-icon" id="menu-icon">
+				<a href="#"><i class="fas fa-bars"></i></a>
+				
+			</div>
+			<nav class="navbar">
+				<ul>
+					<li><a href="#header" class="nav-item">首頁</a></li>
+					<li><a href="#webpage" class="nav-item">網頁練習</a></li>
+					<li><a href="#portfolio" class="nav-item">作品區</a></li>
+					<li><a href="#about" class="nav-item">關於我</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- 首頁 home -->
+	<section class="home" id="home">
+		<!-- home content -->
+		<div class="home-container">
+			<div class="home-text">
+				<span>Hello I'm</span>
+				<h1>Nita Chang</h1>
+				<h2>Visual Designer</h2>
+				<p>從事印刷品設計多年，期間7年工作內容都是書籍美編，有感紙本書的式微，進一步想多了解電子書的製作，而開始緩步踏入了html、css的領域，未來期許自己能成為一位網頁設計師。</p>
+				<a href="#about" class="button">Contact Me</a>
+			</div>
+			<!-- home image -->
+			<div class="home-imgbox">
+				<div class="home-img">
+					<img src="image/ren-ran-bBiuSdck8tU-unsplash.jpg" alt="">
+				</div>
+				<div class="home-colorblack1"></div>
+				<div class="home-colorblack2"></div>
+			</div>
+		</div>
+		<div class="downarrow">
+			<div class="chevron"></div>
+			<div class="chevron"></div>
+			<div class="chevron"></div>
+			<!-- <span class="text">Scroll down</span> -->
+		</div>
+	</section>
+
+	<!-- 網頁練習 webpage -->
+	<section class="webpage" id="webpage">
+		<!-- webpage heading -->
+		<div class="heading">
+			<h2>Website</h2>
+			<h3>網頁練習</h3>
+		</div>
+		<!-- webpage content -->
+		<div class="webpage-container">
+			<div class="webpage-item">
+				<div class="webpage-img">
+					<img src="image/web_01.png" alt="">
+					<div class="overlay">
+						<a href="https://nita790.github.io/Hotel-Booking/" target="_blank">
+							<i class="fa-solid fa-link"></i>
+						</a>
+					</div>
+				</div>
+				<div class="webpage-text">
+					<h4>旅遊網站</h4>
+					<p>VSCode</p>
+				</div>
+			</div>
+			<div class="webpage-item">
+				<div class="webpage-img">
+					<img src="image/web_02.png" alt="">
+				</div>
+				<div class="overlay">
+					<a href="https://nita790.github.io/AI-website/index.html" target="_blank">
+						<i class="fa-solid fa-link"></i>
+					</a>
+				</div>
+				<div class="webpage-text">
+					<h4>六角學院 AI工具王</h4>
+					<p>VSCode</p>
+				</div>
+			</div>
+			<div class="webpage-item">
+				<div class="webpage-img">
+					<img src="image/web_03.jpg" alt="">
+				</div>
+				<div class="overlay">
+					<a href="https://nita790.github.io/restaurant/index.html" target="_blank">
+						<i class="fa-solid fa-link"></i>
+					</a>
+				</div>
+				<div class="webpage-text">
+					<h4>餐廳網站</h4>
+					<p>Bootstrap 一頁式切版練習</p>
+				</div>
+			</div>
+			<!-- <div class="webpage-item">
+				<div class="webpage-img">
+					<img src="image/ui-01.png" alt="">
+				</div>
+				<div class="overlay">
+					<a href="https://reurl.cc/80Mxd4" target="_blank">
+						<i class="fa-solid fa-link"></i>
+					</a>
+				</div>
+				<div class="webpage-text">
+					<h4>行動app介面</h4>
+					<p>Figma phototype</p>
+				</div>
+			</div> -->
+		</div>
+	</section> 
+
+	<!-- 作品區 portfolio -->
+	<section class="portfolio" id="portfolio">
+		<!-- portfolio heading -->
+		<div class="heading">
+			<h2>portfolio</h2>
+			<h3>作品區</h3>
+		</div>
+		<!-- portfolio content -->
+		<div class="portfolio-container">
+			<div class="portfolio-menu">
+				<ul class="menu-btn">
+					<li class="btn active" data-filter="all">全部</li>
+					<li class="btn" data-filter="ui">介面設計</li>
+					<li class="btn" data-filter="graphic">平面設計</li>
+					<li class="btn" data-filter="packaging">包裝商品設計</li>
+				</ul>
+			</div>
+			<div class="gallery" id="store-items">
+				<a href="image/ui-01.png" class="all ui">
+					<img src="image/ui-01.png" alt="">
+				</a>
+				<a href="image/graphic-01.jpg" class="all graphic">
+					<img src="image/graphic-01.jpg" alt="">
+				</a>
+				<a href="image/graphic-02.png" class="all graphic">
+					<img src="image/graphic-02.png" alt="">
+				</a>
+				<a href="image/graphic-03.jpg" class="all graphic">
+					<img src="image/graphic-03.jpg" alt="">
+				</a>
+				<a href="image/graphic-04.jpg" class="all graphic">
+					<img src="image/graphic-04.jpg" alt="">
+				</a>
+				<a href="image/graphic-05.jpg" class="all graphic">
+					<img src="image/graphic-05.jpg" alt="">
+				</a>
+				<a href="image/graphic-06.jpg" class="all graphic">
+					<img src="image/graphic-06.jpg" alt="">
+				</a>
+				<a href="image/graphic-07.jpg" class="all graphic">
+					<img src="image/graphic-07.jpg" alt="">
+				</a>
+				<a href="image/packaging-01.jpg" class="all packaging">
+					<img src="image/packaging-01.jpg" alt="">
+				</a>
+				<a href="image/packaging-02.jpg" class="all packaging">
+					<img src="image/packaging-02.jpg" alt="">
+				</a>
+				<a href="image/packaging-03.jpg" class="all packaging">
+					<img src="image/packaging-03.jpg" alt="">
+				</a>
+				<a href="image/packaging-04.jpg" class="all packaging">
+					<img src="image/packaging-04.jpg" alt="">
+				</a>
+				<a href="image/packaging-05.jpg" class="all packaging">
+					<img src="image/packaging-05.jpg" alt="">
+				</a>
+				<a href="image/packaging-06.jpg" class="all packaging">
+					<img src="image/packaging-06.jpg" alt="">
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- 關於我 about -->
+	<section class="about" id="about">
+		<!-- about heading -->
+		<div class="heading">
+			<h2>About Me</h2>
+			<h3>關於我</h3>
+		</div>
+		<!-- about content -->
+		<div class="about-container">
+			<!-- about img -->
+			<div class="about-img">
+				<img src="image/IMG_3686.JPG" alt="">
+			</div>
+			<!-- about text -->
+			<div class="about-text">
+				<div class="about-work"></div>
+					<p>工作經歷</p>
+					<p><span>東森電視 美術設計</span> | 2016年11月至2020年4月</p>
+					<!-- <p>加盟東森品牌幼兒園所需文宣設計品、大型活動周邊、節慶贈品開發、授權影音DVD發行、電視節參展宣傳品</p> -->
+					<p><span>藝術家出版社 美術編輯</span> | 2008年6月至2015年4月</p>	
+					<!-- <p>書籍編排設計、校稿、打樣、印刷流程追蹤</p> -->
+					<p><span>久久出版工坊 排版美編</span> | 2006年10月至2008年1月</p>
+					<!-- <p>泛亞文化、巧連智月刊等童書編排</p> -->
+				<div class="about-information">
+					<p>聯絡方式</p>
+					<div class="info-box">
+						<div class="info-icon"><i class="fa-solid fa-user"></i></div>
+						<h3>張紓嘉</h3>
+					</div>
+					<div class="info-box">
+						<div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+						<h3>0932-399-312</h3>
+					</div>
+					<div class="info-box">
+						<div class="info-icon"><i class="fa-regular fa-envelope"></i></div>
+						<h3>nita790@yahoo.com.tw</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 頁尾 footer -->
+	<footer>
+		<span>&copy; 2022 Nita Chang</span>
+	</footer>
+
+	<!-- 向上按鈕 button -->
+	<div class="up"  id="gotop">
+		<a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+	</div>
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<!-- mixtup -->
+<script src="js/mixitup.min.js"></script>
+<!-- my js file -->
+<script src="js/all.js"></script>
+</body>
+</html>
